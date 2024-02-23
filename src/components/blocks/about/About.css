@@ -1,0 +1,54 @@
+.about {
+    display: flex;
+    position: relative;
+    padding-left: 90px;
+    padding-top: 159px;
+    padding-bottom: 159px;
+    padding-right: 603px;
+    background-color: #fff6d9;
+    align-items: center;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.about__wrapper {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  min-width: 650px;
+  z-index: 3;
+}
+
+.about__text {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-top: 20px;
+  padding-right: 122px;
+  margin-bottom: 40px;
+}
+
+.about__work-time {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: inline-block;
+  min-height: 43px;
+  min-width: 292px;
+  margin-bottom: 20px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #ffeead;
+  vertical-align: middle;
+}
+
+.about__address {
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+  box-sizing: border-box;
+  background-image: url(/src/assets/flag-icon.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+}

@@ -1,0 +1,26 @@
+.buy-btn {
+    padding: 17px 69px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 115, 43);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 150%;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+}
+
+.buy-btn:focus-visible {
+    background-color: rgb(243, 87, 20);
+}
+
+.buy-btn:hover {
+    background-color: rgb(243, 87, 20);
+}
+
+.buy-btn:active {
+    background-color: rgb(232, 73, 5);
+}

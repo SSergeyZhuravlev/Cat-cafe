@@ -6,6 +6,9 @@
     padding-bottom: 159px;
     padding-right: 603px;
     background-color: #fff6d9;
+    background-image: url('../../../assets/Frame.png'), url('../../../assets/Vector.png');
+    background-repeat: no-repeat;
+    background-position: 80% center;
     align-items: center;
     z-index: 1;
     box-sizing: border-box;

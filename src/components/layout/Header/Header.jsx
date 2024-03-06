@@ -2,11 +2,11 @@ import { Logo } from '../../ui/Logo/Logo';
 import { Nav } from '../Nav/Nav';
 import './Header.css';
 
-export const Header = () => {
+export const Header = ({link}) => {
     return (
         <header className="header">
             <Logo />
-            <Nav />
+            <Nav link={link} />
         </header>
     )
 }

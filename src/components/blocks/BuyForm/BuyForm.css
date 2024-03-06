@@ -1,0 +1,30 @@
+.buy-form {
+    display: flex;
+}
+
+.buy-form__duration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 115, 43);
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.buy-form__duration:not(:last-child) {
+    margin-right: 12px;
+}
+
+.buy-form__visually-hidden-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}

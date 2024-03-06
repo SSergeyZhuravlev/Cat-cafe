@@ -1,0 +1,40 @@
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 79px 277px 100px 277px;
+    background-image: url('/src/assets/gallery-bg-img.png');
+    background-size: 642px 611px;
+    background-repeat: no-repeat;
+    background-position: 125% -100%;
+    background-color: rgb(255, 238, 173);
+}
+
+.gallery::after {
+    position: absolute;
+    content: "";
+    top: 300px;
+    right: -41px;
+    width: 225px;
+    height: 222px;
+    background-image: url('/src/assets/gallery-cat-hand.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    object-fit: contain;
+}
+
+.gallery::before {
+    position: absolute;
+    content: "";
+    bottom: -28px;
+    left: 0;
+    width: 113px;
+    height: 168px;
+    background-image: url('/src/assets/gallery-bg-plant.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.gallery__title {
+    margin-bottom: 64px;
+}

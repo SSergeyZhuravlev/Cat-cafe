@@ -1,27 +1,35 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
+import { Title, TITLE_SIZE } from '../../ui/title/Title';
+import { BuyFormAccordion } from './BuyFormAccordion/BuyFormAccordion';
+import { BuyFormDuration } from './BuyFormDuration/BuyFormDuration';
 import './BuyForm.css';
 
 export const BuyForm = ( { buyOptions } ) => {
-    const duration = buyOptions.durationOptions;
-    const [time, setTime] = useState(duration[0]);
+    const { durationOptions, ticketOptions } = buyOptions;
+    const [currentDuration, setCurrentDuration] = useState(durationOptions[0]);
+    const [visitTypePrice, setVisitTypePrice] = useState(ticketOptions[0].price);
 
     return (
         <form className='buy-form'>
-            {
-                duration.map(option => {
-                    return (
-                        <label className='buy-form__duration' key={`duration${option}`} onChange={(e) => {
-                            setTime(Number(e.target.value));
-                        }}>
-                            <input className='buy-form__visually-hidden-input' type="radio" name='duration' value={option} />
-                            <span>{option}</span>
-                        </label>
-                    )
-                })
-            }
-
+            <BuyFormDuration
+                duration={durationOptions}
+                onChange={(e) => {
+                    setCurrentDuration(Number(e.target.value));
+                    e.currentTarget.className
+                }}
+                currentDuration={currentDuration}
+            />
+            <BuyFormAccordion 
+                ticketOptions={ticketOptions} 
+                onClick={(e) => {
+                    setVisitTypePrice(Number(e.target.value));
+                }} 
+            />
             <div>
-                {`Стоимость получилась ${time * 1000}`}
+                <Title size={TITLE_SIZE.small} priority='3'>Цена</Title>
+                <p>
+                    {`${visitTypePrice * currentDuration}`}
+                </p>
             </div>
         </form>
     )

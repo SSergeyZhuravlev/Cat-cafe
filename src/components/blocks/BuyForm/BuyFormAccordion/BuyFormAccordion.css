@@ -1,0 +1,30 @@
+.buy-form__visually-hidden-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.buy-form__options-list {
+    list-style: none;
+}
+
+.buy-form__options-list__item__title {
+    margin: 0;
+    cursor: pointer;
+}
+
+.buy-form__options-list__item__descr__wrapper {
+    width: 50%;
+    height: 0;
+    overflow: hidden;
+    transition: height .3s ease-in-out;
+}
+
+.buy-form__options-list__item__descr {
+    margin: 0;
+}

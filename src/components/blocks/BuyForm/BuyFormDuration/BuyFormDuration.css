@@ -1,0 +1,46 @@
+.buy-form__duration__title {
+    margin: 0;
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.buy-form__duration-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 24px;
+}
+
+.buy-form__duration-list__item:not(:last-child) {
+    margin-right: 12px;
+}
+
+.buy-form__duration-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    color: rgb(51, 51, 51);
+    background-color: rgb(247, 247, 247);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: color .2s ease-in-out, background-color .3s ease-in-out;
+}
+
+.buy-form__duration-label.buy-form__duration-label--active {
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 115, 43);
+}
+
+.buy-form__visually-hidden-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}

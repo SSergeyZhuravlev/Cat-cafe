@@ -4,10 +4,11 @@ export const BuyFormAccordionItem = forwardRef(( { price, title, description, is
     return (
         <>
             <label className='buy-form__options-list__item__title'>
-                <input type='radio' className='' value={price} name='buy-form-radio' checked={isChecked}
+                <input type='radio' className='buy-form__options-list__item__radio' value={price} name='buy-form-radio' checked={isChecked}
                     onClick={onClick}
                     onChange={onChange} /> 
-                {title}
+                <span className='custom-radio'></span>
+                <span className='buy-form__options-list__item__text'>{title}</span>
             </label>
             <div 
                 className='buy-form__options-list__item__descr__wrapper' 
@@ -15,8 +16,8 @@ export const BuyFormAccordionItem = forwardRef(( { price, title, description, is
                     height ? {height: height} : {height: 0}
                 }>
                 {
-                    isHtml ? <p ref={ref ? ref : null} className='buy-form__options-list__item__descr' dangerouslySetInnerHTML={{__html: description}}></p>
-                    : <p ref={ref ? ref : null} className='buy-form__options-list__item__descr'>{description}</p>
+                    isHtml ? <div ref={ref ? ref : null} className='buy-form__options-list__item__descr' dangerouslySetInnerHTML={{__html: description}}></div>
+                    : <div ref={ref ? ref : null} className='buy-form__options-list__item__descr'>{description}</div>
                 }
             </div>
         </>

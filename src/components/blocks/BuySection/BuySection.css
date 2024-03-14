@@ -1,10 +1,25 @@
 .buy-section {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 100px 90px;
     margin: 0;
     background-color: rgb(255, 246, 217);
+    background-image: url('/src/assets/buy-form-cat-img-bg-1.png');
+    background-position: -40% 170%;
+    background-repeat: no-repeat;
+}
+
+.buy-section::before {
+    content: '';
+    position: absolute;
+    width: 642px;
+    height: 611px;
+    top: 25%;
+    right: 10%;
+    background-image: url('/src/assets/buy-form-cat-img.png'), url('/src/assets/buy-form-cat-img-bg.png');
+    background-repeat: no-repeat;
 }
 
 .buy-section__title {

@@ -14,47 +14,45 @@ export const BuyFormAccordion = ( { ticketOptions, onClick } ) => {
     }, [height, activeIndex])
 
     return (
-        <div>
-            <div>
+        <div className='buy-form__options'>
             <Title size={TITLE_SIZE.small} priority='3'>Тип билета</Title>
-                <ul className='buy-form__options-list'>
-                    {
-                        ticketOptions.map((item, index) => {
-                            return activeIndex === index ? (
-                                <li key={item.id} className='buy-form__options-list__item'>
-                                    <BuyFormAccordionItem
-                                        price={item.price}
-                                        title={item.title}
-                                        description={item.description}
-                                        isChecked={isChecked}
-                                        onChange={() => setIsChecked(!isChecked)}
-                                        height={height}
-                                        isHtml
-                                        ref={ref}
-                                        onClick={onClick}
-                                    />
-                                </li>
-                            )
-                            : (
-                                <li key={item.id} className='buy-form__options-list__item'>
-                                    <BuyFormAccordionItem
-                                        price={item.price}
-                                        title={item.title}
-                                        description={item.description}
-                                        isChecked={!isChecked}
-                                        onChange={() => {
-                                            setActiveIndex(index);
-                                            setIsChecked(isChecked);
-                                        }}
-                                        isHtml
-                                        onClick={onClick}
-                                    />
-                                </li>
-                            )
-                        })
-                    }
-                </ul>
-            </div>
+            <ul className='buy-form__options-list'>
+                {
+                    ticketOptions.map((item, index) => {
+                        return activeIndex === index ? (
+                            <li key={item.id} className='buy-form__options-list__item'>
+                                <BuyFormAccordionItem
+                                    price={item.price}
+                                    title={item.title}
+                                    description={item.description}
+                                    isChecked={isChecked}
+                                    onChange={() => setIsChecked(!isChecked)}
+                                    height={height}
+                                    isHtml
+                                    ref={ref}
+                                    onClick={onClick}
+                                />
+                            </li>
+                        )
+                        : (
+                            <li key={item.id} className='buy-form__options-list__item'>
+                                <BuyFormAccordionItem
+                                    price={item.price}
+                                    title={item.title}
+                                    description={item.description}
+                                    isChecked={!isChecked}
+                                    onChange={() => {
+                                        setActiveIndex(index);
+                                        setIsChecked(isChecked);
+                                    }}
+                                    isHtml
+                                    onClick={onClick}
+                                />
+                            </li>
+                        )
+                    })
+                }
+            </ul>
         </div>
     )
 }

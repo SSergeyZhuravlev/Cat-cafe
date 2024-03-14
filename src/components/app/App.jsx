@@ -4,6 +4,8 @@ import { Footer } from '../layout/Footer/Footer';
 import { BuyPage } from '../pages/BuyPage';
 import './App.css';
 
+const link = '/';
+
 function App() {
   return (
     <>

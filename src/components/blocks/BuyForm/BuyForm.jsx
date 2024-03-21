@@ -5,7 +5,7 @@ import { BuyFormDuration } from './BuyFormDuration/BuyFormDuration';
 import { Button } from "../../ui/Button/Button";
 import './BuyForm.css';
 
-export const BuyForm = ( { buyOptions, link } ) => {
+export const BuyForm = ( { buyOptions } ) => {
     const { durationOptions, ticketOptions } = buyOptions;
     const [currentDuration, setCurrentDuration] = useState(durationOptions[0]);
     const [visitTypePrice, setVisitTypePrice] = useState(ticketOptions[0].price);

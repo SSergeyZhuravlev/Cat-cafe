@@ -1,11 +1,15 @@
-import { Button } from "../../ui/Button/Button";
+import { Link, useLocation } from 'react-router-dom';
 
-export const Nav = ({link}) => {
+export const Nav = () => {
+    const { pathname } = useLocation();
+
     return (
         <nav>
-            <Button link={link} className='header__btn buy-btn' onClick={() => console.log('Купить')}>{
-                link ? 'На главную' : 'Купить билет'
-            }</Button>
+            {
+                pathname === '/' ?
+                <Link to='/buy-page' className='header__btn buy-btn'>Купить</Link>
+                : <Link to='/' className='header__btn__back'>На главную</Link>
+            }
         </nav>
     )
 }

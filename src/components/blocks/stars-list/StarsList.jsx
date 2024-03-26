@@ -1,5 +1,5 @@
+import { Link } from 'react-router-dom';
 import { Title, TITLE_SIZE } from '../../ui/title/Title';
-import { Button } from '../../ui/Button/Button';
 import { StarCard } from '../../ui/star-card/StarCard';
 import './StarsList.css';
 
@@ -18,7 +18,7 @@ export const StarsList = ( { starList } ) => {
                     })
                 }
             </ul>
-            <Button className='star-list__btn buy-btn' onClick={() => console.log('Купить')}>Купить билет</Button>
+            <Link to='/buy-page' className='star-list__btn buy-btn'>Купить билет</Link>
         </section>
     )
 }

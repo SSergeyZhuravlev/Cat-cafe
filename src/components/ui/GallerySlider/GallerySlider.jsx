@@ -2,6 +2,8 @@ import { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Thumbs } from 'swiper/modules';
 import { Button } from '../Button/Button';
+import arrowLeft from '/src/assets/gallery-left-arrow.svg';
+import arrowRight from '/src/assets/gallery-right-arrow.svg';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import './GallerySlider.css';
@@ -15,10 +17,10 @@ export const GallerySlider = ( { gallery } ) => {
     return (
         <div className='gallery-slider-wrapper'>
             <Button className='gallery-slider__btn gallery-slider__btn--left' ref={leftBtnRef}>
-                <img src="./src/assets/gallery-left-arrow.svg" alt="Стрелка назад" />
+                <img src={arrowLeft} alt="Стрелка назад" />
             </Button>
             <Button className='gallery-slider__btn gallery-slider__btn--right' ref={rightBtnRef}>
-                <img src="./src/assets/gallery-right-arrow.svg" alt="Стрелка вперед" />
+                <img src={arrowRight} alt="Стрелка вперед" />
             </Button>
             <Swiper 
                 onSlideChange={(slider) => setActiveSlide(slider.realIndex)}
